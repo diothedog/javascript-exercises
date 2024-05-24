@@ -1,7 +1,7 @@
-const removeFromArray = function(array, values) {
+const removeFromArray = function(array, ...values) {
     let newArray = [];
     for (let item of array) {
-        if (item != values) {
+        if (! values.includes(item)) {
             newArray.push(item);
         }
     }
