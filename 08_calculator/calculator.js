@@ -23,7 +23,7 @@ const factorial = function(num) {
     return 1;
   }
   let product = 1;
-  for(let i = num; i < 0; i--) {
+  for(let i = num; i > 0; i--) {
     product = product * i;
   }
   return product;
