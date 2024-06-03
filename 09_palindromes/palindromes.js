@@ -1,5 +1,5 @@
 const palindromes = function (str) {
-    let arr = str
+    let cleaned = str
         .toLowerCase()
         .split("")
         .filter((char) => char != "." 
@@ -7,8 +7,11 @@ const palindromes = function (str) {
             && char != "," 
             && char != "?"
             && char != ";"
-            && char != ":");
-    return arr === arr.reverse();
+            && char != ":"
+            && char != " ")
+        .join("");
+    let reversed = cleaned.split("").reverse().join("");
+    return cleaned === reversed;
 };
 
 // Do not edit below this line
