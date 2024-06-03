@@ -1,5 +1,12 @@
 const palindromes = function (str) {
-    let arr = str.split("");
+    let arr = str
+        .split("")
+        .filter((char) => char != "." 
+            && char != "!" 
+            && char != "," 
+            && char != "?"
+            && char != ";"
+            && char != ":");
     return arr === arr.reverse();
 };
 
