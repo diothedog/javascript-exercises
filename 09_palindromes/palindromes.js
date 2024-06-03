@@ -1,5 +1,6 @@
 const palindromes = function (str) {
     let arr = str
+        .toLowerCase()
         .split("")
         .filter((char) => char != "." 
             && char != "!" 
